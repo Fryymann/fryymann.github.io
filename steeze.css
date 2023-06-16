@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-gray: #2b4141;
+    --med-gray: #9ea3B0;
+    --light-gray: #efefef;
+    --accent-color: #B74f6f;
+    --bg-color: rgba(239, 239, 239, 0.5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: var(--light-gray);
+    background-image: url("bg-image.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        ". . . . center center center center . . . ."
+        ". . . . center center center center . . . ."
+        "left left left left center center center center right right right right"
+        ". . . . center center center center . . . ."
+        ". . . . center center center center . . . ."
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    justify-content: center;
+    align-content: stretch;
+    justify-items: stretch;
+
+    font-size: 16px;
+}
+
+.navbar {
+    grid-area: nav;
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.left-panel {
+    grid-area: left;
+}
+
+.center-panel {
+    grid-area: center;
+    font-size: 4em;
+}
+
+.right-panel {
+    grid-area: right;
+}
+
+.right-panel, .left-panel {
+    font-size: 2em;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.tbg {
+    background-color: var(--bg-color);
+}
