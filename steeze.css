@@ -63,6 +63,7 @@ body {
 .center-panel {
     grid-area: center;
     font-size: 4em;
+    flex-direction: column;
 }
 
 .right-panel {
