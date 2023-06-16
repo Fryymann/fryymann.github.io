@@ -16,6 +16,9 @@ body {
 }
 
 .page {
+    font-size: 12px;
+    color: #fff;
+
     width: 100vw;
     min-height: 100vh;
 
@@ -26,26 +29,30 @@ body {
     background-size: cover;
 
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
+        "nav"
+        "center"
+        "center"
+        "center"
+        "footer";
+    /* grid-template-areas:
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         ". . . . center center center center . . . ."
         ". . . . center center center center . . . ."
         "left left left left center center center center right right right right"
         ". . . . center center center center . . . ."
         ". . . . center center center center . . . ."
-        "footer footer footer footer footer footer footer footer footer footer footer footer";
+        "footer footer footer footer footer footer footer footer footer footer footer footer"; */
     justify-content: center;
     align-content: stretch;
     justify-items: stretch;
 
-    font-size: 16px;
 }
 
 .navbar {
     grid-area: nav;
-    padding-bottom: 1em;
     font-size: 2em;
 }
 
@@ -53,7 +60,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 }
 
 .left-panel {
@@ -62,7 +68,6 @@ body {
 
 .center-panel {
     grid-area: center;
-    font-size: 4em;
     flex-direction: column;
 }
 
@@ -80,4 +85,12 @@ body {
 
 .tbg {
     background-color: var(--bg-color);
+}
+
+.name-header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
 }
